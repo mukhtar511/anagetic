@@ -107,4 +107,20 @@ jobs:
         run: flutter pub get
       - name: Build iOS (unsigned; sign + archive with your provisioning profile)
         working-directory: app
-        run: flutter build ios --release --no-codesign --dart-define=API_BASE_URL=${{ vars.API_BASE_URL || 'https://api.anaqatuk.sa/api' }}
+        env:
+          COCOAPODS_DISABLE_STATS: "true"
+          LANG: en_US.UTF-8
+        # Retry to absorb transient CocoaPods CDN DNS blips on the macOS runner.
+        run: |
+          set -e
+          for attempt in 1 2 3; do
+            echo "iOS build attempt $attempt"
+            if flutter build ios --release --no-codesign \
+                --dart-define=API_BASE_URL=${{ vars.API_BASE_URL || 'https://api.anaqatuk.sa/api' }}; then
+              exit 0
+            fi
+            echo "attempt $attempt failed; cleaning pods and retrying"
+            rm -rf ios/Pods ios/Podfile.lock
+            sleep $((attempt * 15))
+          done
+          echo "iOS build failed after 3 attempts"; exit 1

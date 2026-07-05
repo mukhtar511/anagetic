@@ -148,6 +148,111 @@ class ApiRepository {
       _dio.post('/orders/$orderId/rating',
           data: {'stars': stars, 'chips': chips, if (text != null) 'text': text});
 
+  // --- Stores / designer page (SPEC §3.3) ---
+  Future<List<Map<String, dynamic>>> stores() async {
+    final res = await _dio.get('/stores');
+    return _list(res.data);
+  }
+
+  Future<Map<String, dynamic>> store(int id) async {
+    final res = await _dio.get('/stores/$id');
+    return _unwrap(res.data);
+  }
+
+  // --- Favorites (SPEC §3.11) ---
+  Future<List<Product>> favorites() async {
+    final res = await _dio.get('/favorites');
+    return _list(res.data).map((e) => Product.fromJson(e)).toList();
+  }
+
+  Future<void> addFavorite(int productId, {bool notifyWhenOpen = false}) =>
+      _dio.post('/favorites',
+          data: {'product_id': productId, 'notify_when_open': notifyWhenOpen});
+
+  Future<void> removeFavorite(int productId) =>
+      _dio.delete('/favorites/$productId');
+
+  // --- Chat (SPEC §3.10) ---
+  Future<List<Map<String, dynamic>>> conversations() async {
+    final res = await _dio.get('/conversations');
+    return _list(res.data);
+  }
+
+  Future<List<Map<String, dynamic>>> messages(int conversationId) async {
+    final res = await _dio.get('/conversations/$conversationId/messages');
+    return _list(res.data);
+  }
+
+  Future<Map<String, dynamic>> sendMessage(int conversationId, String body) async {
+    final res = await _dio.post('/conversations/$conversationId/messages',
+        data: {'body': body});
+    return _unwrap(res.data);
+  }
+
+  Future<void> acceptAddonOffer(int offerId) =>
+      _dio.post('/addon-offers/$offerId/accept');
+
+  Future<void> rejectAddonOffer(int offerId) =>
+      _dio.post('/addon-offers/$offerId/reject');
+
+  // --- Seller: listing (SPEC §3.4) ---
+  Future<Map<String, dynamic>> aiFill() async {
+    final res = await _dio.post('/listings/ai-fill');
+    return _unwrap(res.data);
+  }
+
+  Future<Map<String, dynamic>> createProduct(Map<String, dynamic> body) async {
+    final res = await _dio.post('/products', data: body);
+    return _unwrap(res.data);
+  }
+
+  Future<void> deleteProduct(int id) => _dio.delete('/products/$id');
+
+  Future<void> buyFeatured(int productId, String scope, int days, String payVia) =>
+      _dio.post('/products/$productId/featured',
+          data: {'scope': scope, 'days': days, 'pay_via': payVia});
+
+  // --- Seller: dashboard & store (SPEC §3.8) ---
+  Future<Map<String, dynamic>> sellerDashboard() async {
+    final res = await _dio.get('/seller/dashboard');
+    return _unwrap(res.data);
+  }
+
+  Future<void> confirmDelivery(int orderId, String code) =>
+      _dio.post('/seller/orders/$orderId/confirm-delivery', data: {'code': code});
+
+  Future<void> confirmRentalSound(int bookingId) =>
+      _dio.post('/seller/rentals/$bookingId/sound');
+
+  Future<void> openRentalDispute(int bookingId) =>
+      _dio.post('/seller/rentals/$bookingId/dispute');
+
+  Future<void> updateStore(Map<String, dynamic> body) =>
+      _dio.put('/store', data: body);
+
+  Future<List<Map<String, dynamic>>> sellerCoupons() async {
+    final res = await _dio.get('/seller/coupons');
+    return _list(res.data);
+  }
+
+  Future<void> createSellerCoupon(Map<String, dynamic> body) =>
+      _dio.post('/seller/coupons', data: body);
+
+  Future<void> updateSellerCoupon(int id, Map<String, dynamic> body) =>
+      _dio.patch('/seller/coupons/$id', data: body);
+
+  Future<void> deleteSellerCoupon(int id) =>
+      _dio.delete('/seller/coupons/$id');
+
+  Future<List<Map<String, dynamic>>> sellerSmartRequests() async {
+    final res = await _dio.get('/seller/smart-requests');
+    return _list(res.data);
+  }
+
+  Future<void> submitSmartOffer(int requestId, num price, String? message) =>
+      _dio.post('/smart-requests/$requestId/offers',
+          data: {'price': price, if (message != null) 'message': message});
+
   // --- Helpers ---
   List<Map<String, dynamic>> _list(dynamic data) {
     final raw = data is Map && data.containsKey('data') ? data['data'] : data;

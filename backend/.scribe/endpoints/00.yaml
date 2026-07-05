@@ -1,0 +1,3680 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/auth/otp/request
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/auth/otp/request'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      phone:
+        custom: []
+        name: phone
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      phone: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/auth/otp/verify
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/auth/otp/verify'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      phone:
+        custom: []
+        name: phone
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      code:
+        custom: []
+        name: code
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      region_id:
+        custom: []
+        name: region_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      phone: architecto
+      code: architecto
+      region_id: 16
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/regions
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/regions'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[{"id":1,"name":"\u0627\u0644\u0631\u064a\u0627\u0636"},{"id":2,"name":"\u062c\u062f\u0629"},{"id":3,"name":"\u0645\u0643\u0629 \u0627\u0644\u0645\u0643\u0631\u0645\u0629"},{"id":4,"name":"\u0627\u0644\u062f\u0645\u0627\u0645"},{"id":5,"name":"\u0627\u0644\u0637\u0627\u0626\u0641"},{"id":6,"name":"\u0623\u0628\u0647\u0627"},{"id":7,"name":"\u0627\u0644\u0645\u062f\u064a\u0646\u0629 \u0627\u0644\u0645\u0646\u0648\u0631\u0629"},{"id":8,"name":"\u0628\u0631\u064a\u062f\u0629"},{"id":9,"name":"\u062a\u0628\u0648\u0643"},{"id":10,"name":"\u062d\u0627\u0626\u0644"},{"id":11,"name":"\u062c\u0627\u0632\u0627\u0646"},{"id":12,"name":"\u0646\u062c\u0631\u0627\u0646"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/products
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/products'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[{"id":10,"code":"E-21","title":"\u062d\u0642\u064a\u0628\u0629 \u0633\u0647\u0631\u0629 \u0645\u0631\u0635\u0651\u0639\u0629","category":"used","condition":"used_good","is_single_piece":false,"status":"out","region_id":1,"images":[],"price":310,"original_price":750,"on_sale":true,"modes":[{"type":"ready","price":310,"deposit":null}],"has_rent":false,"store":{"id":9,"name":"\u062e\u0632\u0627\u0646\u0629 \u0627\u0644\u0639\u0646\u0648\u062f","slug":"khazanat-anoud","rating_avg":4.8,"status":"open"}},{"id":9,"code":"B-33","title":"\u0639\u0628\u0627\u064a\u0627\u062a \u0643\u0631\u064a\u0628 \u0623\u0633\u0648\u062f \u2014 \u062f\u0641\u0639\u0629 \u0665 \u0642\u0637\u0639","category":"nobrand","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":390,"original_price":null,"on_sale":false,"modes":[{"type":"ready","price":390,"deposit":null}],"has_rent":false,"store":{"id":10,"name":"\u0645\u062e\u0632\u0648\u0646 \u0645\u0635\u0645\u0645\u0627\u062a","slug":"makhzoun-musammimat","rating_avg":4.5,"status":"open"}},{"id":8,"code":"S-09","title":"\u0641\u0633\u062a\u0627\u0646 \u0632\u0641\u0627\u0641 \u0644\u064f\u0628\u0633 \u0645\u0631\u0629 \u0648\u0627\u062d\u062f\u0629","category":"used","condition":"used_excellent","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":250,"original_price":4500,"on_sale":true,"modes":[{"type":"ready","price":1800,"deposit":null},{"type":"rent","price":250,"deposit":400}],"has_rent":true,"store":{"id":6,"name":"\u062e\u0632\u0627\u0646\u0629 \u0633\u0627\u0631\u0629","slug":"khazanat-sara","rating_avg":4.6,"status":"paused"}},{"id":7,"code":"J-55","title":"\u0637\u0642\u0645 \u0625\u0643\u0633\u0633\u0648\u0627\u0631\u0627\u062a \u0628\u062d\u062c\u0631 \u0627\u0644\u0639\u0642\u064a\u0642","category":"acc","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":220,"original_price":null,"on_sale":false,"modes":[{"type":"ready","price":220,"deposit":null}],"has_rent":false,"store":{"id":4,"name":"\u062c\u0648\u0627\u0647\u0631 \u0647\u0646\u062f","slug":"jawaher-hind","rating_avg":4.7,"status":"open"}},{"id":6,"code":"W-12","title":"\u0643\u0631\u064a\u0645 \u0627\u0644\u0648\u0631\u062f \u0627\u0644\u0637\u0627\u0626\u0641\u064a \u0644\u0644\u0628\u0634\u0631\u0629","category":"care","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":85,"original_price":null,"on_sale":false,"modes":[{"type":"ready","price":85,"deposit":null}],"has_rent":false,"store":{"id":3,"name":"\u0648\u0631\u062f \u0627\u0644\u062c\u0648\u0631\u064a \u0644\u0644\u0639\u0646\u0627\u064a\u0629","slug":"ward-aljori","rating_avg":4.9,"status":"open"}},{"id":5,"code":"N-300","title":"\u0641\u0635\u0651\u0644\u064a \u0639\u0628\u0627\u064a\u062a\u0643 \u0639\u0644\u0649 \u0645\u0642\u0627\u0633\u0643","category":"abaya","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":750,"original_price":null,"on_sale":false,"modes":[{"type":"custom","price":750,"deposit":null}],"has_rent":false,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}},{"id":4,"code":"N-087","title":"\u0639\u0628\u0627\u064a\u0629 \u0643\u0631\u064a\u0628 \u064a\u0627\u0628\u0627\u0646\u064a\u0629 \u0628\u0642\u0635\u0651\u0629 \u0643\u0644\u0648\u0634","category":"abaya","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":540,"original_price":null,"on_sale":false,"modes":[{"type":"ready","price":540,"deposit":null}],"has_rent":false,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}},{"id":3,"code":"N-201","title":"\u0639\u0628\u0627\u064a\u0629 \u0632\u0641\u0651\u0629 \u0645\u0637\u0631\u0632\u0629 \u0628\u0627\u0644\u0643\u0627\u0645\u0644 \u2014 \u0642\u0637\u0639\u0629 \u0648\u0627\u062d\u062f\u0629","category":"abaya","condition":"new","is_single_piece":true,"status":"live","region_id":1,"images":[],"price":320,"original_price":null,"on_sale":false,"modes":[{"type":"rent","price":320,"deposit":500}],"has_rent":true,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}},{"id":2,"code":"N-114","title":"\u0639\u0628\u0627\u064a\u0629 \u0645\u0646\u0627\u0633\u0628\u0627\u062a \u0645\u0637\u0631\u0632\u0629 \u0628\u062e\u064a\u0648\u0637 \u0630\u0647\u0628\u064a\u0629","category":"abaya","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":140,"original_price":null,"on_sale":false,"modes":[{"type":"custom","price":1100,"deposit":null},{"type":"ready","price":950,"deposit":null},{"type":"rent","price":140,"deposit":250}],"has_rent":true,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}},{"id":1,"code":"A2605","title":"\u0641\u0633\u062a\u0627\u0646 \u0633\u0647\u0631\u0629 \u0633\u0627\u062a\u0627\u0646 \u0628\u0642\u0635\u0651\u0629 \u0645\u0644\u0643\u064a\u0629","category":"dress","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":180,"original_price":null,"on_sale":false,"modes":[{"type":"custom","price":1400,"deposit":null},{"type":"ready","price":1250,"deposit":null},{"type":"rent","price":180,"deposit":300}],"has_rent":true,"store":{"id":2,"name":"\u0631\u064a\u0645 \u0643\u0648\u062a\u0648\u0631","slug":"reem-couture","rating_avg":4.8,"status":"open"}}],"links":{"first":"http:\/\/localhost\/api\/products?page=1","last":"http:\/\/localhost\/api\/products?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost\/api\/products?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost\/api\/products","per_page":20,"to":10,"total":10}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/products/{product_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/products/{product}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":{"id":1,"code":"A2605","title":"\u0641\u0633\u062a\u0627\u0646 \u0633\u0647\u0631\u0629 \u0633\u0627\u062a\u0627\u0646 \u0628\u0642\u0635\u0651\u0629 \u0645\u0644\u0643\u064a\u0629","description":null,"category":"dress","condition":"new","collection":"\u0645\u062c\u0645\u0648\u0639\u0629 \u0639\u064a\u062f \u0662\u0660\u0662\u0666","is_single_piece":false,"status":"live","region_id":1,"images":[],"original_price":null,"return_policy_ack":true,"modes":[{"type":"custom","price":1400,"deposit":null,"prep_time":null,"exec_time":null,"rent_scope":null},{"type":"ready","price":1250,"deposit":null,"prep_time":null,"exec_time":null,"rent_scope":null},{"type":"rent","price":180,"deposit":300,"prep_time":null,"exec_time":null,"rent_scope":null}],"colors":[{"name":"\u0648\u0631\u062f\u064a","hex":null,"in_stock":true},{"name":"\u0623\u0633\u0648\u062f","hex":null,"in_stock":true},{"name":"\u0630\u0647\u0628\u064a","hex":null,"in_stock":false}],"addons":[{"id":1,"name":"\u062a\u0637\u0631\u064a\u0632 \u0625\u0636\u0627\u0641\u064a \u0639\u0644\u0649 \u0627\u0644\u0623\u0643\u0645\u0627\u0645","price":80},{"id":2,"name":"\u0628\u0637\u0627\u0646\u0629 \u0643\u0627\u0645\u0644\u0629","price":120},{"id":3,"name":"\u0634\u064a\u0644\u0629 \u0628\u0646\u0641\u0633 \u0627\u0644\u0642\u0645\u0627\u0634","price":200},{"id":4,"name":"\u0630\u064a\u0644 \u0644\u0644\u0641\u0633\u062a\u0627\u0646","price":150}],"store":{"id":2,"name":"\u0631\u064a\u0645 \u0643\u0648\u062a\u0648\u0631","slug":"reem-couture","tagline":"\u0641\u0633\u0627\u062a\u064a\u0646 \u0633\u0647\u0631\u0629 \u2014 \u0628\u064a\u0639 \u0648\u062a\u0623\u062c\u064a\u0631","region_id":1,"status":"open","comm_mode":"call","phone":"0551234567","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2024,"rating_avg":4.8,"completed_orders":410,"on_time_rate":0},"reviews":[],"rating_avg":4.8}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/featured
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/featured'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/stores
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/stores'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"data":[{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","tagline":"\u0639\u0628\u0627\u064a\u0627\u062a \u0645\u0646\u0627\u0633\u0628\u0627\u062a \u0648\u062a\u0641\u0635\u064a\u0644","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2023,"rating_avg":4.9,"completed_orders":620,"on_time_rate":97},{"id":3,"name":"\u0648\u0631\u062f \u0627\u0644\u062c\u0648\u0631\u064a \u0644\u0644\u0639\u0646\u0627\u064a\u0629","slug":"ward-aljori","tagline":"\u062e\u0644\u0637\u0627\u062a \u0637\u0628\u064a\u0639\u064a\u0629 \u0648\u0643\u0631\u064a\u0645\u0627\u062a","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2022,"rating_avg":4.9,"completed_orders":890,"on_time_rate":0},{"id":7,"name":"\u0639\u0637\u0631 \u0648\u0639\u0648\u062f","slug":"atr-woud","tagline":"\u062e\u0644\u0637\u0627\u062a \u0639\u0637\u0631\u064a\u0629 \u0648\u0639\u0646\u0627\u064a\u0629 \u0628\u0627\u0644\u0634\u0639\u0631","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2024,"rating_avg":4.9,"completed_orders":340,"on_time_rate":0},{"id":2,"name":"\u0631\u064a\u0645 \u0643\u0648\u062a\u0648\u0631","slug":"reem-couture","tagline":"\u0641\u0633\u0627\u062a\u064a\u0646 \u0633\u0647\u0631\u0629 \u2014 \u0628\u064a\u0639 \u0648\u062a\u0623\u062c\u064a\u0631","region_id":1,"status":"open","comm_mode":"call","phone":"0551234567","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2024,"rating_avg":4.8,"completed_orders":410,"on_time_rate":0},{"id":5,"name":"\u0644\u0645\u0633\u0629 \u0644\u0637\u064a\u0641\u0629","slug":"lamsa-latifa","tagline":"\u0641\u0633\u0627\u062a\u064a\u0646 \u0623\u0637\u0641\u0627\u0644 \u0648\u0645\u0648\u0627\u0644\u064a\u062f","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2025,"rating_avg":4.8,"completed_orders":150,"on_time_rate":0},{"id":9,"name":"\u062e\u0632\u0627\u0646\u0629 \u0627\u0644\u0639\u0646\u0648\u062f","slug":"khazanat-anoud","tagline":"\u0645\u0633\u062a\u0639\u0645\u0644 \u0645\u0648\u062b\u0651\u0642","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","rating_avg":4.8,"completed_orders":0,"on_time_rate":0},{"id":4,"name":"\u062c\u0648\u0627\u0647\u0631 \u0647\u0646\u062f","slug":"jawaher-hind","tagline":"\u0625\u0643\u0633\u0633\u0648\u0627\u0631\u0627\u062a \u0648\u0645\u0634\u063a\u0648\u0644\u0627\u062a \u064a\u062f\u0648\u064a\u0629","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2024,"rating_avg":4.7,"completed_orders":270,"on_time_rate":0},{"id":6,"name":"\u062e\u0632\u0627\u0646\u0629 \u0633\u0627\u0631\u0629","slug":"khazanat-sara","tagline":"\u0641\u0633\u0627\u062a\u064a\u0646 \u0645\u0633\u062a\u0639\u0645\u0644\u0629 \u2014 \u0628\u064a\u0639 \u0648\u062a\u0623\u062c\u064a\u0631","region_id":1,"status":"paused","comm_mode":"payfirst","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2025,"rating_avg":4.6,"completed_orders":95,"on_time_rate":0},{"id":10,"name":"\u0645\u062e\u0632\u0648\u0646 \u0645\u0635\u0645\u0645\u0627\u062a","slug":"makhzoun-musammimat","tagline":"\u0628\u062f\u0648\u0646 \u0628\u0631\u0627\u0646\u062f","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","rating_avg":4.5,"completed_orders":0,"on_time_rate":0}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/stores/{store_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/stores/{store}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      store_id:
+        custom: []
+        name: store_id
+        description: 'The ID of the store.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      store_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","tagline":"\u0639\u0628\u0627\u064a\u0627\u062a \u0645\u0646\u0627\u0633\u0628\u0627\u062a \u0648\u062a\u0641\u0635\u064a\u0644","region_id":1,"status":"open","comm_mode":"chat","packaging":[{"key":"normal","name":"\u062a\u063a\u0644\u064a\u0641 \u0639\u0627\u062f\u064a","price":0,"enabled":true},{"key":"simple","name":"\u062a\u063a\u0644\u064a\u0641 \u0628\u0633\u064a\u0637","price":15,"enabled":true},{"key":"special","name":"\u062a\u063a\u0644\u064a\u0641 \u0633\u0628\u064a\u0634\u0644","price":45,"enabled":true},{"key":"gift","name":"\u062a\u063a\u0644\u064a\u0641 \u0647\u062f\u0627\u064a\u0627","price":65,"enabled":false}],"delivery_flat_price":25,"delivery_free_km":15,"verification_status":"verified","joined_year":2023,"rating_avg":4.9,"completed_orders":620,"on_time_rate":97},"products":[{"id":5,"code":"N-300","title":"\u0641\u0635\u0651\u0644\u064a \u0639\u0628\u0627\u064a\u062a\u0643 \u0639\u0644\u0649 \u0645\u0642\u0627\u0633\u0643","category":"abaya","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":750,"original_price":null,"on_sale":false,"modes":[{"type":"custom","price":750,"deposit":null}],"has_rent":false,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}},{"id":4,"code":"N-087","title":"\u0639\u0628\u0627\u064a\u0629 \u0643\u0631\u064a\u0628 \u064a\u0627\u0628\u0627\u0646\u064a\u0629 \u0628\u0642\u0635\u0651\u0629 \u0643\u0644\u0648\u0634","category":"abaya","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":540,"original_price":null,"on_sale":false,"modes":[{"type":"ready","price":540,"deposit":null}],"has_rent":false,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}},{"id":3,"code":"N-201","title":"\u0639\u0628\u0627\u064a\u0629 \u0632\u0641\u0651\u0629 \u0645\u0637\u0631\u0632\u0629 \u0628\u0627\u0644\u0643\u0627\u0645\u0644 \u2014 \u0642\u0637\u0639\u0629 \u0648\u0627\u062d\u062f\u0629","category":"abaya","condition":"new","is_single_piece":true,"status":"live","region_id":1,"images":[],"price":320,"original_price":null,"on_sale":false,"modes":[{"type":"rent","price":320,"deposit":500}],"has_rent":true,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}},{"id":2,"code":"N-114","title":"\u0639\u0628\u0627\u064a\u0629 \u0645\u0646\u0627\u0633\u0628\u0627\u062a \u0645\u0637\u0631\u0632\u0629 \u0628\u062e\u064a\u0648\u0637 \u0630\u0647\u0628\u064a\u0629","category":"abaya","condition":"new","is_single_piece":false,"status":"live","region_id":1,"images":[],"price":140,"original_price":null,"on_sale":false,"modes":[{"type":"custom","price":1100,"deposit":null},{"type":"ready","price":950,"deposit":null},{"type":"rent","price":140,"deposit":250}],"has_rent":true,"store":{"id":1,"name":"\u062f\u0627\u0631 \u0646\u0648\u0631\u0629 \u0644\u0644\u0639\u0628\u0627\u064a\u0627\u062a","slug":"dar-noura","rating_avg":4.9,"status":"open"}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/policies
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '{"updated_at":"\u064a\u0648\u0644\u064a\u0648 \u0662\u0660\u0662\u0666","sections":[{"key":"return","title":"\u21a9\ufe0f \u0633\u064a\u0627\u0633\u0629 \u0627\u0644\u0627\u0633\u062a\u0631\u062c\u0627\u0639 \u0627\u0644\u0645\u062c\u0627\u0646\u064a","body":"\u0625\u0631\u062c\u0627\u0639 \u0645\u062c\u0627\u0646\u064a \u062e\u0644\u0627\u0644 \u0667 \u0623\u064a\u0627\u0645 \u0645\u0646 \u0627\u0644\u0627\u0633\u062a\u0644\u0627\u0645. \u0645\u0646\u062a\u062c\u0627\u062a \u0627\u0644\u062a\u0641\u0635\u064a\u0644 \u0627\u0644\u062e\u0627\u0635 \u062a\u064f\u0633\u062a\u0631\u062c\u0639 \u0641\u0642\u0637 \u0641\u064a \u062d\u0627\u0644 \u0639\u064a\u0628 \u0645\u0635\u0646\u0639\u064a."},{"key":"rental","title":"\ud83d\udc57 \u0633\u064a\u0627\u0633\u0629 \u0627\u0644\u062a\u0623\u062c\u064a\u0631 \u0648\u0627\u0644\u062a\u0623\u0645\u064a\u0646","body":"\u064a\u064f\u062d\u062c\u0632 \u062a\u0623\u0645\u064a\u0646 \u0645\u0633\u062a\u0631\u062f \u0639\u0646\u062f \u0627\u0644\u062a\u0623\u062c\u064a\u0631\u060c \u0648\u064a\u064f\u0639\u0627\u062f \u0643\u0627\u0645\u0644\u064b\u0627 \u0628\u0639\u062f \u0641\u062d\u0635 \u0627\u0644\u0642\u0637\u0639\u0629 \u0648\u062a\u0623\u0643\u064a\u062f \u0633\u0644\u0627\u0645\u062a\u0647\u0627."},{"key":"escrow","title":"\ud83d\udd12 \u0627\u0644\u0634\u0631\u0627\u0621 \u0627\u0644\u0622\u0645\u0646 (Escrow) \u0648\u0643\u0648\u062f \u0627\u0644\u062a\u0633\u0644\u064a\u0645","body":"\u0645\u0628\u0644\u063a\u0643 \u0645\u062d\u062c\u0648\u0632 \u0628\u0623\u0645\u0627\u0646 \u0648\u0644\u0627 \u064a\u0635\u0644 \u0644\u0644\u0628\u0627\u0626\u0639\u0629 \u0625\u0644\u0627 \u0628\u0639\u062f \u0625\u062f\u062e\u0627\u0644 \u0643\u0648\u062f \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0645\u0643\u0648\u0651\u0646 \u0645\u0646 \u0664 \u0623\u0631\u0642\u0627\u0645."},{"key":"shipping","title":"\ud83d\ude9a \u0627\u0644\u0634\u062d\u0646 \u0648\u0627\u0644\u062a\u0648\u0635\u064a\u0644","body":"\u0627\u0644\u062a\u0648\u0635\u064a\u0644 \u062d\u0633\u0628 \u0627\u0644\u0645\u0646\u0637\u0642\u0629\u060c \u0648\u0644\u0643\u0644 \u0634\u062d\u0646\u0629 \u0643\u0648\u062f \u062a\u0633\u0644\u064a\u0645 \u062e\u0627\u0635 \u0628\u0647\u0627."},{"key":"commission","title":"\ud83d\udcb0 \u0627\u0644\u0639\u0645\u0648\u0644\u0629 \u0648\u0627\u0644\u0631\u0633\u0648\u0645","body":"\u0639\u0645\u0648\u0644\u0629 \u0627\u0644\u0645\u0646\u0635\u0629 \u0661\u0662\u066a \u062a\u064f\u062d\u0633\u0628 \u0639\u0644\u0649 \u0633\u0639\u0631 \u0627\u0644\u0628\u064a\u0639 \u0628\u0639\u062f \u0643\u0648\u0628\u0648\u0646 \u0627\u0644\u0628\u0627\u0626\u0639\u0629\u060c \u0648\u062a\u064f\u062e\u0635\u0645 \u0639\u0646\u062f \u062a\u062d\u0631\u064a\u0631 \u0627\u0644\u0645\u0628\u0644\u063a."},{"key":"privacy","title":"\ud83d\udd10 \u0633\u064a\u0627\u0633\u0629 \u0627\u0644\u062e\u0635\u0648\u0635\u064a\u0629","body":"\u0628\u064a\u0627\u0646\u0627\u062a\u0643 \u0645\u062d\u0645\u064a\u0629 \u0648\u0644\u0627 \u062a\u064f\u0634\u0627\u0631\u0643 \u0645\u0639 \u0623\u064a \u0637\u0631\u0641 \u062e\u0627\u0631\u062c\u064a \u0625\u0644\u0627 \u0648\u0641\u0642 \u0627\u0644\u0646\u0638\u0627\u0645."},{"key":"terms","title":"\ud83d\udcdc \u0627\u0644\u0634\u0631\u0648\u0637 \u0648\u0627\u0644\u0623\u062d\u0643\u0627\u0645","body":"\u0643\u0644 \u0627\u0644\u062a\u0639\u0627\u0645\u0644 \u064a\u062a\u0645 \u0639\u0628\u0631 \u0627\u0644\u0645\u0646\u0635\u0629\u061b \u064a\u064f\u0645\u0646\u0639 \u062a\u0628\u0627\u062f\u0644 \u0627\u0644\u0623\u0631\u0642\u0627\u0645 \u0623\u0648 \u0627\u0644\u062f\u0641\u0639 \u062e\u0627\u0631\u062c \u0623\u0646\u0627\u0642\u062a\u0643."}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/auth/logout
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/auth/logout'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/me
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/me'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/cart
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/cart'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/cart/items
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/cart/items'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'Must match an existing stored value.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      mode:
+        custom: []
+        name: mode
+        description: ''
+        required: true
+        example: ready
+        type: string
+        enumValues:
+          - ready
+          - custom
+          - rent
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      color:
+        custom: []
+        name: color
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      qty:
+        custom: []
+        name: qty
+        description: 'Must be at least 1.'
+        required: false
+        example: 22
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      addon_ids:
+        custom: []
+        name: addon_ids
+        description: ''
+        required: false
+        example:
+          - 16
+        type: 'integer[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      packaging:
+        custom: []
+        name: packaging
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      measurements:
+        custom: []
+        name: measurements
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      notes:
+        custom: []
+        name: notes
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      occasion_date:
+        custom: []
+        name: occasion_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-07-06T00:49:00'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      product_id: 16
+      mode: ready
+      color: architecto
+      qty: 22
+      addon_ids:
+        - 16
+      packaging: architecto
+      notes: architecto
+      occasion_date: '2026-07-06T00:49:00'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/cart/items/{cartItem_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'DELETE /api/cart/items/{cartItem}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      cartItem_id:
+        custom: []
+        name: cartItem_id
+        description: 'The ID of the cartItem.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      cartItem_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/cart/coupon
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/cart/coupon'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      code:
+        custom: []
+        name: code
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      code: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: api/cart/coupon
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'DELETE /api/cart/coupon'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/checkout
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/checkout'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      payment_method:
+        custom: []
+        name: payment_method
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      coupon_code:
+        custom: []
+        name: coupon_code
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      payment_method: architecto
+      coupon_code: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/orders
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/orders?status=all|active|done|cancel'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/orders/{order_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/orders/{order}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        custom: []
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      order_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/orders/{order_id}/cancel'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/orders/{order}/cancel'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        custom: []
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      order_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/orders/{order_id}/return'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/orders/{order}/return'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        custom: []
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      order_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      reason:
+        custom: []
+        name: reason
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      reason: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/orders/{order_id}/rating'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/orders/{order}/rating'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        custom: []
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      order_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      stars:
+        custom: []
+        name: stars
+        description: 'Must be at least 1. Must not be greater than 5.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      chips:
+        custom: []
+        name: chips
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      text:
+        custom: []
+        name: text
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      stars: 1
+      text: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/wallet
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/wallet'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/wallet/withdraw
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/wallet/withdraw'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      amount:
+        custom: []
+        name: amount
+        description: 'Must be at least 0.'
+        required: true
+        example: 27
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      amount: 27
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/deposits
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/deposits'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/deposits/{deposit_id}/appeal'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/deposits/{deposit}/appeal'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      deposit_id:
+        custom: []
+        name: deposit_id
+        description: 'The ID of the deposit.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      deposit_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/favorites
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/favorites'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/favorites
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/favorites'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'Must match an existing stored value.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      notify_when_open:
+        custom: []
+        name: notify_when_open
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      product_id: 16
+      notify_when_open: true
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/favorites/{product_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'DELETE /api/favorites/{product}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/notifications
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/notifications'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/notifications/read-all
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/notifications/read-all'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/notifications/{notification_id}/read'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/notifications/{notification}/read'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      notification_id:
+        custom: []
+        name: notification_id
+        description: 'The ID of the notification.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      notification_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/smart-requests
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "GET /api/smart-requests — the buyer's own requests with their offers."
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/smart-requests
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/smart-requests'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      type:
+        custom: []
+        name: type
+        description: ''
+        required: true
+        example: buy
+        type: string
+        enumValues:
+          - buy
+          - rent
+          - both
+          - custom
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: ''
+        required: true
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      category:
+        custom: []
+        name: category
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      size:
+        custom: []
+        name: size
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      budget:
+        custom: []
+        name: budget
+        description: 'Must be at least 0.'
+        required: true
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      need_by:
+        custom: []
+        name: need_by
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-07-06T00:49:00'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      scope:
+        custom: []
+        name: scope
+        description: ''
+        required: false
+        example: region_only
+        type: string
+        enumValues:
+          - region_first
+          - region_only
+          - all
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      ref_images:
+        custom: []
+        name: ref_images
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      change_notes:
+        custom: []
+        name: change_notes
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      type: buy
+      description: 'Eius et animi quos velit et.'
+      category: architecto
+      size: architecto
+      budget: 39
+      need_by: '2026-07-06T00:49:00'
+      scope: region_only
+      change_notes: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/smart-requests/{smartRequest_id}/close'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/smart-requests/{smartRequest}/close'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      smartRequest_id:
+        custom: []
+        name: smartRequest_id
+        description: 'The ID of the smartRequest.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      smartRequest_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/offers/{offer_id}/accept'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        POST /api/offers/{offer}/accept
+        The buyer accepts a seller offer → an escrow order is created from it and
+        the smart request is marked accepted.
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      offer_id:
+        custom: []
+        name: offer_id
+        description: 'The ID of the offer.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      offer_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/conversations
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/conversations — conversations the user takes part in (buyer or seller).'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/conversations/{conversation_id}/messages'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/conversations/{conversation}/messages'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      conversation_id:
+        custom: []
+        name: conversation_id
+        description: 'The ID of the conversation.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      conversation_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/conversations/{conversation_id}/messages'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/conversations/{conversation}/messages'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      conversation_id:
+        custom: []
+        name: conversation_id
+        description: 'The ID of the conversation.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      conversation_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      body:
+        custom: []
+        name: body
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      body: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/conversations/{conversation_id}/addon-offers'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/conversations/{conversation}/addon-offers — seller proposes an addition.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      conversation_id:
+        custom: []
+        name: conversation_id
+        description: 'The ID of the conversation.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      conversation_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      price:
+        custom: []
+        name: price
+        description: 'Must be at least 0.'
+        required: true
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: architecto
+      price: 39
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/addon-offers/{addonOffer_id}/accept'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/addon-offers/{addonOffer}/accept — buyer accepts → attach to order.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      addonOffer_id:
+        custom: []
+        name: addonOffer_id
+        description: 'The ID of the addonOffer.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      addonOffer_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/addon-offers/{addonOffer_id}/reject'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/addon-offers/{addonOffer}/reject'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      addonOffer_id:
+        custom: []
+        name: addonOffer_id
+        description: 'The ID of the addonOffer.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      addonOffer_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/products
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/products'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        custom: []
+        name: title
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      category:
+        custom: []
+        name: category
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      condition:
+        custom: []
+        name: condition
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      code:
+        custom: []
+        name: code
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      collection:
+        custom: []
+        name: collection
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      region_id:
+        custom: []
+        name: region_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: false
+        example: draft
+        type: string
+        enumValues:
+          - live
+          - out
+          - draft
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      is_single_piece:
+        custom: []
+        name: is_single_piece
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      images:
+        custom: []
+        name: images
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      original_price:
+        custom: []
+        name: original_price
+        description: ''
+        required: false
+        example: 4326.41688
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      return_policy_ack:
+        custom: []
+        name: return_policy_ack
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      modes:
+        custom: []
+        name: modes
+        description: 'Must have at least 1 items.'
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      colors:
+        custom: []
+        name: colors
+        description: ''
+        required: false
+        example: null
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      addons:
+        custom: []
+        name: addons
+        description: ''
+        required: false
+        example: null
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].type':
+        custom: []
+        name: 'modes[].type'
+        description: ''
+        required: true
+        example: custom
+        type: string
+        enumValues:
+          - ready
+          - custom
+          - rent
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'modes[].price':
+        custom: []
+        name: 'modes[].price'
+        description: 'Must be at least 0.'
+        required: true
+        example: 27
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'modes[].deposit':
+        custom: []
+        name: 'modes[].deposit'
+        description: 'Must be at least 0.'
+        required: false
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].prep_time':
+        custom: []
+        name: 'modes[].prep_time'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].exec_time':
+        custom: []
+        name: 'modes[].exec_time'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].rent_scope':
+        custom: []
+        name: 'modes[].rent_scope'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'colors[].name':
+        custom: []
+        name: 'colors[].name'
+        description: 'This field is required when <code>colors</code> is present.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'colors[].hex':
+        custom: []
+        name: 'colors[].hex'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'colors[].qty':
+        custom: []
+        name: 'colors[].qty'
+        description: 'Must be at least 0.'
+        required: false
+        example: 39
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'addons[].name':
+        custom: []
+        name: 'addons[].name'
+        description: 'This field is required when <code>addons</code> is present.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'addons[].price':
+        custom: []
+        name: 'addons[].price'
+        description: 'This field is required when <code>addons</code> is present. Must be at least 0.'
+        required: false
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      title: architecto
+      category: architecto
+      description: 'Eius et animi quos velit et.'
+      condition: architecto
+      code: architecto
+      collection: architecto
+      region_id: 16
+      status: draft
+      is_single_piece: false
+      original_price: 4326.41688
+      return_policy_ack: true
+      modes:
+        - type: custom
+          price: 27
+          deposit: 39
+          prep_time: architecto
+          exec_time: architecto
+          rent_scope: architecto
+      colors:
+        - name: architecto
+          hex: architecto
+          qty: 39
+      addons:
+        - name: architecto
+          price: 39
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+    uri: 'api/products/{product_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'PUT /api/products/{product}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        custom: []
+        name: title
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      category:
+        custom: []
+        name: category
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      condition:
+        custom: []
+        name: condition
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      code:
+        custom: []
+        name: code
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      collection:
+        custom: []
+        name: collection
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      region_id:
+        custom: []
+        name: region_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: false
+        example: live
+        type: string
+        enumValues:
+          - live
+          - out
+          - draft
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      is_single_piece:
+        custom: []
+        name: is_single_piece
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      images:
+        custom: []
+        name: images
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      original_price:
+        custom: []
+        name: original_price
+        description: ''
+        required: false
+        example: 4326.41688
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      return_policy_ack:
+        custom: []
+        name: return_policy_ack
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      modes:
+        custom: []
+        name: modes
+        description: 'Must have at least 1 items.'
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      colors:
+        custom: []
+        name: colors
+        description: ''
+        required: false
+        example: null
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      addons:
+        custom: []
+        name: addons
+        description: ''
+        required: false
+        example: null
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].type':
+        custom: []
+        name: 'modes[].type'
+        description: ''
+        required: true
+        example: ready
+        type: string
+        enumValues:
+          - ready
+          - custom
+          - rent
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'modes[].price':
+        custom: []
+        name: 'modes[].price'
+        description: 'Must be at least 0.'
+        required: true
+        example: 27
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'modes[].deposit':
+        custom: []
+        name: 'modes[].deposit'
+        description: 'Must be at least 0.'
+        required: false
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].prep_time':
+        custom: []
+        name: 'modes[].prep_time'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].exec_time':
+        custom: []
+        name: 'modes[].exec_time'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'modes[].rent_scope':
+        custom: []
+        name: 'modes[].rent_scope'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'colors[].name':
+        custom: []
+        name: 'colors[].name'
+        description: 'This field is required when <code>colors</code> is present.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'colors[].hex':
+        custom: []
+        name: 'colors[].hex'
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'colors[].qty':
+        custom: []
+        name: 'colors[].qty'
+        description: 'Must be at least 0.'
+        required: false
+        example: 39
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      'addons[].name':
+        custom: []
+        name: 'addons[].name'
+        description: 'This field is required when <code>addons</code> is present.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      'addons[].price':
+        custom: []
+        name: 'addons[].price'
+        description: 'This field is required when <code>addons</code> is present. Must be at least 0.'
+        required: false
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      title: architecto
+      category: architecto
+      description: 'Eius et animi quos velit et.'
+      condition: architecto
+      code: architecto
+      collection: architecto
+      region_id: 16
+      status: live
+      is_single_piece: false
+      original_price: 4326.41688
+      return_policy_ack: true
+      modes:
+        - type: ready
+          price: 27
+          deposit: 39
+          prep_time: architecto
+          exec_time: architecto
+          rent_scope: architecto
+      colors:
+        - name: architecto
+          hex: architecto
+          qty: 39
+      addons:
+        - name: architecto
+          price: 39
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/products/{product_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'DELETE /api/products/{product}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/listings/ai-fill
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/listings/ai-fill — "✨ تعبئة تلقائية من الصورة". SPEC §3.4.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      image:
+        custom: []
+        name: image
+        description: 'Must be a file. Must be an image.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters: []
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/products/{product_id}/featured'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/products/{product}/featured'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      scope:
+        custom: []
+        name: scope
+        description: ''
+        required: true
+        example: all
+        type: string
+        enumValues:
+          - region
+          - all
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      days:
+        custom: []
+        name: days
+        description: ''
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      pay_via:
+        custom: []
+        name: pay_via
+        description: ''
+        required: false
+        example: card
+        type: string
+        enumValues:
+          - wallet
+          - card
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      scope: all
+      days: 16
+      pay_via: card
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/seller/dashboard
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/seller/dashboard'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/seller/orders/{order_id}/confirm-delivery'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/seller/orders/{order}/confirm-delivery'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        custom: []
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      order_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      code:
+        custom: []
+        name: code
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      code: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/seller/rentals/{booking_id}/sound'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/seller/rentals/{booking}/sound — piece returned sound → refund deposit.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      booking_id:
+        custom: []
+        name: booking_id
+        description: 'The ID of the booking.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      booking_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/seller/rentals/{booking_id}/dispute'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/seller/rentals/{booking}/dispute — open a damage dispute.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      booking_id:
+        custom: []
+        name: booking_id
+        description: 'The ID of the booking.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      booking_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      evidence:
+        custom: []
+        name: evidence
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      note:
+        custom: []
+        name: note
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      note: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/seller/coupons
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/seller/coupons'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/seller/coupons
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/seller/coupons'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PATCH
+    uri: 'api/seller/coupons/{coupon_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'PATCH /api/seller/coupons/{coupon}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      coupon_id:
+        custom: []
+        name: coupon_id
+        description: 'The ID of the coupon.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      coupon_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      value:
+        custom: []
+        name: value
+        description: ''
+        required: false
+        example: 4326.41688
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      kind:
+        custom: []
+        name: kind
+        description: ''
+        required: false
+        example: pct
+        type: string
+        enumValues:
+          - fix
+          - pct
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      cap:
+        custom: []
+        name: cap
+        description: ''
+        required: false
+        example: 4326.41688
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      min:
+        custom: []
+        name: min
+        description: ''
+        required: false
+        example: 4326.41688
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      active:
+        custom: []
+        name: active
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      note:
+        custom: []
+        name: note
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      value: 4326.41688
+      kind: pct
+      cap: 4326.41688
+      min: 4326.41688
+      active: true
+      note: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/seller/coupons/{coupon_id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'DELETE /api/seller/coupons/{coupon}'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      coupon_id:
+        custom: []
+        name: coupon_id
+        description: 'The ID of the coupon.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      coupon_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+    uri: api/store
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'PUT /api/store — update status, comm_mode, packaging and delivery settings.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: false
+        example: closed
+        type: string
+        enumValues:
+          - open
+          - paused
+          - closed
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      comm_mode:
+        custom: []
+        name: comm_mode
+        description: ''
+        required: false
+        example: chat
+        type: string
+        enumValues:
+          - chat
+          - call
+          - payfirst
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      phone_visible:
+        custom: []
+        name: phone_visible
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      phone:
+        custom: []
+        name: phone
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      tagline:
+        custom: []
+        name: tagline
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      bio:
+        custom: []
+        name: bio
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      packaging:
+        custom: []
+        name: packaging
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      delivery_free_km:
+        custom: []
+        name: delivery_free_km
+        description: 'Must be at least 0.'
+        required: false
+        example: 39
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      delivery_flat_price:
+        custom: []
+        name: delivery_flat_price
+        description: 'Must be at least 0.'
+        required: false
+        example: 84
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      status: closed
+      comm_mode: chat
+      phone_visible: false
+      phone: architecto
+      tagline: architecto
+      bio: architecto
+      delivery_free_km: 39
+      delivery_flat_price: 84
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/seller/smart-requests
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'GET /api/seller/smart-requests — open requests the store can bid on.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/smart-requests/{smartRequest_id}/offers'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST /api/smart-requests/{smartRequest}/offers'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      smartRequest_id:
+        custom: []
+        name: smartRequest_id
+        description: 'The ID of the smartRequest.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      smartRequest_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      price:
+        custom: []
+        name: price
+        description: 'Must be at least 0.'
+        required: true
+        example: 27
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      message:
+        custom: []
+        name: message
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      delivery_note:
+        custom: []
+        name: delivery_note
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      price: 27
+      message: architecto
+      delivery_note: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

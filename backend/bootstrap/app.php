@@ -18,7 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions) {
         // Domain rules throw RuntimeException carrying a ready Arabic message.
         // On the API surface that is always a 422 the client can show verbatim.
-        $exceptions->render(function (\RuntimeException $e, Request $request) {
+        $exceptions->render(function (RuntimeException $e, Request $request) {
             if ($request->is('api/*') || $request->expectsJson()) {
                 return response()->json(['message' => $e->getMessage()], 422);
             }

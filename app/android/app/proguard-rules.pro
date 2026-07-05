@@ -15,6 +15,15 @@
 -keep class com.pusher.** { *; }
 -dontwarn com.pusher.**
 
-# Gson/OkHttp transitive (if pulled by plugins) — silence warnings.
+# Pusher pulls java-pusher-client → slf4j, which references an optional binder
+# class that isn't shipped. Silence it so R8 doesn't fail on the missing class.
+-dontwarn org.slf4j.**
+-keep class org.slf4j.** { *; }
+
+# Gson/OkHttp/other transitive deps pulled by plugins — silence R8 warnings.
 -dontwarn okhttp3.**
 -dontwarn okio.**
+-dontwarn javax.annotation.**
+-dontwarn org.conscrypt.**
+-dontwarn org.bouncycastle.**
+-dontwarn org.openjsse.**

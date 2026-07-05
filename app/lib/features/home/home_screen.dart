@@ -113,6 +113,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             onPressed: () => context.push('/notifications'),
           ),
           IconButton(
+            icon: const Icon(Icons.favorite_border),
+            tooltip: 'المفضلة',
+            onPressed: () => context.push('/favorites'),
+          ),
+          IconButton(
             icon: const Icon(Icons.shopping_bag_outlined),
             tooltip: 'السلة',
             onPressed: () => context.push('/cart'),

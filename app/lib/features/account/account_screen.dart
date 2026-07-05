@@ -272,9 +272,11 @@ class _AccountScreenState extends ConsumerState<AccountScreen> {
       runSpacing: 10,
       children: [
         _quickLink('📦 طلباتي', () => context.push('/orders')),
-        _quickLink('💬 محادثاتي', () => _snack('قريبًا')),
-        _quickLink('♥ مفضلتي', () => _snack('قريبًا')),
+        _quickLink('💬 محادثاتي', () => context.push('/chat')),
+        _quickLink('♥ مفضلتي', () => context.push('/favorites')),
         _quickLink('🪄 طلباتي الذكية', () => context.push('/smart-request')),
+        _quickLink('🏪 لوحة متجري', () => context.push('/seller')),
+        _quickLink('🛍️ متابعة التسوق', () => context.go('/')),
       ],
     );
   }

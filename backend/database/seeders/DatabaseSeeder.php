@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CouponSeeder::class,        // platform + store coupons (needs stores).
             WalletLedgerSeeder::class,  // نوف's wallet + ledger (needs نوف).
             NotificationSeeder::class,  // نوف's notifications (needs نوف).
+            AdminSeeder::class,         // Filament platform admin.
         ]);
     }
 }

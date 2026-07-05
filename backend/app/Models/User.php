@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Database\Factories\UserFactory;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -11,10 +13,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     /** @use HasFactory<UserFactory> */
     use HasApiTokens, HasFactory, Notifiable;
+
+    /** Only platform admins may enter the Filament panel. SPEC §2 / §7. */
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return $this->is_admin === true;
+    }
 
     protected $fillable = [
         'name',
@@ -24,6 +32,7 @@ class User extends Authenticatable
         'is_admin',
         'fcm_token',
         'phone_verified_at',
+        'suspended_at',
         'email',
         'password',
     ];
@@ -35,6 +44,7 @@ class User extends Authenticatable
 
     protected $casts = [
         'phone_verified_at' => 'datetime',
+        'suspended_at' => 'datetime',
         'is_verified_seller' => 'boolean',
         'is_admin' => 'boolean',
         'password' => 'hashed',

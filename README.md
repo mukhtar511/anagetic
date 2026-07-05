@@ -67,10 +67,13 @@ flutter test           # اختبارات وحدة/ويجت + Golden RTL
 | المرحلة | الحالة |
 |---|---|
 | ٠ — المواصفة (SPEC/DECISIONS) | ✅ |
-| ١ — الباك إند (قاعدة، خدمات، REST API موثّق، Pest) | ✅ ٢١ اختبارًا |
+| ١ — الباك إند (قاعدة، خدمات، REST API موثّق، Pest) | ✅ ٢٩ اختبارًا (١٣٠ تأكيدًا) |
 | ٢ — لوحة الأدمن (Filament) | ✅ ٨ موارد + إحصائيات |
-| ٣ — Flutter (Design System + شاشات + realtime + اختبارات) | ✅ الأساس + الرحلة الأساسية |
-| ٤ — تكامل E2E | 🚧 |
-| ٥ — تجهيز النشر | 🚧 (`DEPLOYMENT.md` + `.env.example` جاهزان) |
+| ٣ — Flutter (Design System + **١٦ شاشة** + realtime + اختبارات) | ✅ `analyze` صفر تحذيرات |
+| ٤ — تكامل E2E (٥ سيناريوهات عبر HTTP) | ✅ كلها خضراء |
+| ٥ — تجهيز النشر (أيقونة/Splash، توقيع، ProGuard، CI) | ✅ |
+
+- **الاختبارات:** ٢٩ Pest (تشمل ٥ E2E) + ٦ Flutter — كلها خضراء · `pint` و`flutter analyze` نظيفان.
+- **بناء النشر:** التطبيق مُهيّأ بالكامل للـrelease (توقيع، تصغير R8، صلاحيات دنيا، أيقونة/Splash بالهوية). ينتج ملف AAB/APK وبناء iOS عبر GitHub Actions (`.github/workflows/ci.yml`) — البناء المحلي هنا متعذّر لأن الساندبوكس يحجب Android SDK ولا يوفّر macOS.
 
 راجع مراجعات المراحل: [`backend/PHASE-1-REVIEW.md`](backend/PHASE-1-REVIEW.md).

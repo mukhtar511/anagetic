@@ -1,0 +1,109 @@
+name: CI & Release Builds
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  backend:
+    name: Backend (Laravel) — Pest + Pint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: pdo, sqlite, mbstring, bcmath, redis, gd
+          coverage: none
+      - name: Install dependencies
+        working-directory: backend
+        run: composer install --no-interaction --prefer-dist --no-progress
+      - name: Prepare env
+        working-directory: backend
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+      - name: Migrate + seed (SQLite)
+        working-directory: backend
+        run: |
+          touch database/database.sqlite
+          php artisan migrate:fresh --seed --force
+      - name: Pint (format check)
+        working-directory: backend
+        run: php vendor/bin/pint --test
+      - name: Pest (all business rules + E2E)
+        working-directory: backend
+        run: php vendor/bin/pest
+
+  flutter-analyze-test:
+    name: Flutter — analyze + test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Pub get
+        working-directory: app
+        run: flutter pub get
+      - name: Analyze (zero warnings)
+        working-directory: app
+        run: flutter analyze
+      - name: Test (unit + widget + golden)
+        working-directory: app
+        run: flutter test
+
+  android-release:
+    name: Android — release AAB + APK
+    needs: [flutter-analyze-test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Pub get
+        working-directory: app
+        run: flutter pub get
+      - name: Restore signing keystore
+        working-directory: app/android
+        # In CI, provide these repository secrets:
+        #   ANDROID_KEYSTORE_BASE64, ANDROID_KEY_PROPERTIES
+        run: |
+          if [ -n "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" ]; then
+            echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > app/anaqatuk-release.jks
+            printf '%s' "${{ secrets.ANDROID_KEY_PROPERTIES }}" > key.properties
+          fi
+      - name: Build release App Bundle + APK
+        working-directory: app
+        run: |
+          flutter build appbundle --release --dart-define=API_BASE_URL=${{ vars.API_BASE_URL }}
+          flutter build apk --release --dart-define=API_BASE_URL=${{ vars.API_BASE_URL }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-release
+          path: |
+            app/build/app/outputs/bundle/release/*.aab
+            app/build/app/outputs/flutter-apk/*.apk
+
+  ios-release:
+    name: iOS — release build (no codesign)
+    needs: [flutter-analyze-test]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Pub get
+        working-directory: app
+        run: flutter pub get
+      - name: Build iOS (unsigned; sign + archive with your provisioning profile)
+        working-directory: app
+        run: flutter build ios --release --no-codesign --dart-define=API_BASE_URL=${{ vars.API_BASE_URL }}

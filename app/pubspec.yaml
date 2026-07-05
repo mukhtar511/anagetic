@@ -39,8 +39,30 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  image: ^4.9.1
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
 
 flutter:
   uses-material-design: true
   assets:
     - assets/
+
+# App launcher icon — brand identity. Generate: dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  adaptive_icon_background: "#6D28A9"
+  adaptive_icon_foreground: "assets/splash_logo.png"
+
+# Splash screen — royal purple field with the gold arch mark.
+# Generate: dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#6D28A9"
+  image: assets/splash_logo.png
+  android_12:
+    color: "#6D28A9"
+    image: assets/splash_logo.png

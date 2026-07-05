@@ -1,0 +1,15 @@
+# Static analysis — SPEC §8 (level 6+).
+# Requires larastan/larastan (install where GitHub-dist auth is available):
+#   composer require --dev larastan/larastan
+# then: php vendor/bin/phpstan analyse
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 6
+    paths:
+        - app
+    excludePaths:
+        - app/Console/Kernel.php
+    checkModelProperties: true
+    checkOctaneCompatibility: false

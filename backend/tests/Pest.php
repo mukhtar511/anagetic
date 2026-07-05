@@ -10,7 +10,9 @@ use App\Models\Wallet;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-uses(TestCase::class, RefreshDatabase::class)->in('Feature', 'Unit');
+// Feature tests hit the DB; Unit tests are pure (no RefreshDatabase).
+uses(TestCase::class, RefreshDatabase::class)->in('Feature');
+uses(TestCase::class)->in('Unit');
 
 /*
  * Lightweight domain builders — enough to exercise the §4 business rules

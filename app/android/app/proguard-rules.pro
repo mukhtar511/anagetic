@@ -5,6 +5,17 @@
 -keep class io.flutter.plugins.** { *; }
 -dontwarn io.flutter.embedding.**
 
+# Google Play Core — Flutter's Play Store split-install embedding
+# (io.flutter.app.FlutterPlayStoreSplitApplication and the deferred-components
+# manager) references these classes. We don't use dynamic delivery, so the
+# classes aren't on the path; keep + dontwarn so R8 never fails on them and the
+# build stays correct if Play dynamic delivery is enabled later.
+-keep class com.google.android.play.core.** { *; }
+-keep interface com.google.android.play.core.** { *; }
+-dontwarn com.google.android.play.core.**
+-keep class io.flutter.app.FlutterPlayStoreSplitApplication { *; }
+-keep class io.flutter.embedding.engine.deferredcomponents.** { *; }
+
 # Keep annotations / native method names used via JNI.
 -keepattributes *Annotation*
 -keepclasseswithmembernames class * {

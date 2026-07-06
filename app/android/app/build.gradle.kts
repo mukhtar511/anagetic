@@ -26,8 +26,9 @@ android {
 
     defaultConfig {
         applicationId = "sa.anaqatuk.anaqatuk"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        // Explicit for reviewability: Android 5.0+ covers every OnePlus device.
+        minSdk = 21
+        targetSdk = flutter.targetSdkVersion // 34
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
@@ -40,6 +41,11 @@ android {
                 storeFile = keystoreProperties["storeFile"]?.let { file(it) }
                 storePassword = keystoreProperties["storePassword"] as String
             }
+            // Sign with v1 (JAR) + v2 + v3 so strict OEM installers (OnePlus/
+            // ColorOS, etc.) accept the sideloaded APK on all supported API levels.
+            enableV1Signing = true
+            enableV2Signing = true
+            enableV3Signing = true
         }
     }
 
